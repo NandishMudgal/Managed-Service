@@ -1,0 +1,34 @@
+name,Instance,appliation,message,condition,threashold,time,by,critical threshold,warning threshold,type of trigger,type,monitor name,alert creation
+High CPU Load  {{aws.name}} -  {{host.environment}} - {{host.ip}} - {{host.name_tag}} – {{host.owner}},system.load.15,monitoring:on,@thenmozhy12@gmail.com,>,on average,1m,avg,3,nil,host,metric alert,metric,no
+High CPU Utilization on  {{aws.name}} -  {{host.environment}} - {{host.ip}} - {{host.name_tag}} - {{host.owner}},system.cpu.system,monitoring:on,@thenmozhy12@gmail.com,>,on average,5m,avg,90,80,host,metric alert,metric,no
+High Memory Utilization Alert - {{aws.name}} - {{host.environment}} - {{host.ip}} - {{host.name_tag}} - {{host.owner}},"system.mem.used,system.mem.cached,system.mem.total",monitoring:on,@thenmozhy12@gmail.com,>,on average,5m,avg,90,85,host,metric alert,metric,no
+High CPU utilization detected on   {{host.aws}} - {{host.name}} - {{host.environment}} - {{host.ip}},system.cpu.system,"monitoring:on,application:ftpoc",@thenmozhy12@gmail.com,>,on average,5m,avg,90,80,host,metric alert,metric,no
+High Number of Process Count - {{host.aws}} - {{host.environment}} - {{host.application}} - {{host.ip}} - {{host.name}},system.processes.number,monitoring:on,@thenmozhy12@gmail.com,>,on average,5m,avg,30,20,host,metric alert,metric,no
+Number of users login as reached the limit - {{host.aws}} - {{host.ip}} - {{host.name}} - {{host.application}},userlogin,userlogin_monitoring,@thenmozhy12@gmail.com,>,on average,5m,avg,5,3,host,metric alert,metric,no
+Windows Total  number of Users logged In reached the Threshold {{host.adcontroller}} {{host.ip}} {{host.name}},system.users.count,adcontroller,@thenmozhy12@gmail.com,>=,on average,5m,avg,10,5,host,metric alert,metric,no
+Uptime of the host is less {{host.environment}} - {{host.ip}} - {{host.name_tag}} - {{host.owner}},system.uptime,monitoring:on,@thenmozhy12@gmail.com,<,at all times,1m,avg,0.0104167,,host,metric alert,metric,no
+Windows Total process count is below than expected {{host.ip}} {{host.name}} {{host.adcontroller}},system.proc.count,adcontroller,@thenmozhy12@gmail.com,<=,on average,5m,avg,30,40,host,metric alert,metric,no
+EBS High Disk Usage ( {{device.name}} ) - {{aws.name}} - {{host.environment}} - {{host.ip}} - {{host.name_tag}} - {{host.owner}},system.disk.in_use,monitoring:on,@thenmozhy12@gmail.com,>,on average,5m,avg,90,80,"host,device",query alert,metric,no
+,,,,,,,,,,,,,
+SSL certificate is going to Expire- {{url.name}} - {{host.environment}},All monitored SSL endpoints,monitoring:on,@thenmozhy12@gmail.com,,,,ssl,2,,"host,instance,url",service check,network,no
+Detected Error on the URL - {{url.name}} - {{host.environment}},All monitored SSL endpoints,application:bastionhost,@thenmozhy12@gmail.com,,,,ssl,,,"host,instance,url",service check,network,no
+SSL certificate is going to Expire- {{url.name}} - {{host.environment}},ecosystem_preprod,monitoring:on,@thenmozhy12@gmail.com,,,,ssl,,,"host,instance,url",service check,network,no
+SSL certificate is going to Expire- {{url.name}} - {{host.environment}},ecosystem_preprod,application:bastionhost,@thenmozhy12@gmail.com,,,,ssl,,,"host,instance,url",service check,network,no
+HTTP is unable to connect- {{url.name}} - {{host.environment}},All monitored SSL endpoints,monitoring:on,@thenmozhy12@gmail.com,,,,http,2,,"host,instance,url",service check,network,no
+HTTP is unable to connect- {{url.name}} – {{host.environment}},All monitored SSL endpoints,application:bastionhost,@thenmozhy12@gmail.com,,,,http,,,"host,instance,url",service check,network,no
+HTTP is unable to connect- {{url.name}} - {{host.environment}},ecosystem_preprod,monitoring:on,@thenmozhy12@gmail.com,,,,http,,,"host,instance,url",service check,network,no
+HTTP is unable to connect- {{url.name}} – {{host.environment}},ecosystem_preprod,application:bastionhost,@thenmozhy12@gmail.com,,,,http,,,"host,instance,url",service check,network,no
+TCP is unable to connect- {{url.name}} - {{host.environment}},All monitored SSL endpoints,monitoring:on,@thenmozhy12@gmail.com,,,,tcp,2,,"host,instance,url",service check,network,no
+TCP is unable to connect- {{url.name}} – {{host.environment}},All monitored SSL endpoints,application:bastionhost,@thenmozhy12@gmail.com,,,,tcp,,,"host,instance,url",service check,network,no
+TCP is unable to connect- {{url.name}} - {{host.environment}},ecosystem_preprod,monitoring:on,@thenmozhy12@gmail.com,,,,tcp,,,"host,instance,url",service check,network,no
+TCP is unable to connect- {{url.name}} – {{host.environment}},ecosystem_preprod,"application:bastionhost,test",@thenmozhy12@gmail.com,,,,tcp,,,"host,instance,url",service check,network,no
+host alert- {{url.name}} - {{host.environment}},,appliation:web,@thenmozhy12@gmail.com,,,,,,,host,service check,host,no
+host alert- {{url.name}} – {{host.environment}},,All monitored Host,@thenmozhy12@gmail.com,,,,,,,host,service check,host,no
+Apache is unable to connect- {{url.name}} - {{host.environment}},,All monitored Host,@thenmozhy12@gmail.com,,,,apache,,,"host,port",service check,integration,yes
+Apache is unable to connect- {{url.name}} – {{host.environment}},,application:ecosystem,@thenmozhy12@gmail.com,,,,apache,,,"host,port",service check,integration,yes
+Tomcat is unable to connect- {{url.name}} - {{host.environment}},,All monitored Host,@thenmozhy12@gmail.com,,,,tomcat,,,"host,instance",service check,integration,no
+Tomcat is unable to connect- {{url.name}} – {{host.environment}},,application:ecosystem,@thenmozhy12@gmail.com,,,,tomcat,,,"host,instance",service check,integration,no
+Mysql is unable to connect- {{url.name}} - {{host.environment}},,All monitored Host,@thenmozhy12@gmail.com,,,,mysql,,,"host,port",service check,integration,no
+Mysql is unable to connect- {{url.name}} – {{host.environment}},,application:ecosystem,@thenmozhy12@gmail.com,,,,mysql,,,"host,port",service check,integration,no
+Java is unable to connect- {{url.name}} - {{host.environment}},process:java-jdk1.8.0_92,All monitored Host,@thenmozhy12@gmail.com,,,,java,,,"host,process",service check,process,no
+Java is unable to connect- {{url.name}} – {{host.environment}},process:httpd,role:app,@thenmozhy12@gmail.com,,,,java,,,"host,process",service check,process,no
