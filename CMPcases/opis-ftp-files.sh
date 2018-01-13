@@ -5,7 +5,7 @@ backup_path="/bk-opis/backup"
 cd $source_path
 today_date=$(date "+%d-%m-%Y")
 find -type f -mtime +31 | sed 's/.//' > "$log_path/"ftp_31_days_old_files_$today_date
-file_name=$(ls "$backup_path/"ftp_31_days_old_files_$today_date)
+file_name=$(ls "$log_path/"ftp_31_days_old_files_$today_date)
 file_list=$(cat $file_name)
 
 for files in $file_list
